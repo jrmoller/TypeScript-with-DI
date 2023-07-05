@@ -1,6 +1,6 @@
 TypeScript-with-DI
 ==================
-Modules become stateless and testable because of dependency injection.
+TypeScript modules become stateless and testable because of dependency injection.
 
 This architecture was presented to me by Rasmus - https://github.com/mindplay-dk - https://dev.to/mindplay
 
