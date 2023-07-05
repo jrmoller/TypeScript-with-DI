@@ -18,3 +18,18 @@ export function createShowMessage(console: Pick<Console, "log">): showMessageTyp
     console.log(message);
   }
 }
+
+// --- test:
+// test("can show message", () => { ... })
+const mockConsole = {
+  log(message: string) {
+    this.messages.push(message);
+  },
+  messages: [] as string[],
+} as Partial<Console> as Console;
+
+const showMessage = createShowMessage(mockConsole);
+
+showMessage("Hello");
+
+// assert(mockConsole.messages[0] == "Hello")
